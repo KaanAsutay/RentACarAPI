@@ -8,6 +8,8 @@ const router = require('express').Router()
 
 // URL: /
 
+// auth:
+router.use('/auths', require('./auth'))
 // user:
 router.use('/users', require('./user'))
 // token:
