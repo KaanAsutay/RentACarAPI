@@ -74,19 +74,25 @@ const CarSchema = new mongoose.Schema({
         default: true
     },
 
+    // images: []
+    images: {
+        type: Array,
+        default: []
+    },
+
     createdId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true
+        required: true,
     },
 
     updatedId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true
-    }
+        required: true,
+    },
 
-}, {collection: 'cars', timestamps: true})
+}, { collection: 'cars', timestamps: true })
 
 /* ------------------------------------------------------- */
 module.exports = mongoose.model('Car', CarSchema)
