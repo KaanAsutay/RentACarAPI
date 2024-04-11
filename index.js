@@ -45,6 +45,17 @@ const nodemailer = require('nodemailer')
 
 // Create Test (Fake) Account:
 
+// nodemailer.createTestAccount().then((email) => console.log(email))
+/*
+{
+  user: 'lpvamvjr6k4cdzi7@ethereal.email',
+  pass: 'RfcqfdMZWgNpKEh54a',
+  smtp: { host: 'smtp.ethereal.email', port: 587, secure: false },
+  imap: { host: 'imap.ethereal.email', port: 993, secure: true },
+  pop3: { host: 'pop3.ethereal.email', port: 995, secure: true },
+  web: 'https://ethereal.email'
+}
+*/
 
 
 
