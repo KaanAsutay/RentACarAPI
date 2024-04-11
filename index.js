@@ -67,7 +67,18 @@ const transporter = nodemailer.createTransport({
         pass: 'RfcqfdMZWgNpKEh54a'
     }
 })
-console.log(transporter)
+
+// SendMail:
+transporter.sendMail({
+    from: 'lpvamvjr6k4cdzi7@ethereal.email',
+    to: 'kaanasutay10@gmail.com', // 'abc@gmail.com, def@mail.com' // require
+    subject: 'hello', // require
+    text: 'Hello There your success..', 
+    html: '<b>Hello There </b>' // require
+}, (error, successInfo) => {
+    if (error) console.log(error)
+    else console.log(successInfo)
+})
 
 /* ------------------------------------------------------- */
 // Routes:
