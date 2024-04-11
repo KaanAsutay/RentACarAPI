@@ -39,6 +39,16 @@ app.use(require('./src/middlewares/logger'))
 app.use(require('./src/middlewares/findSearchSortPage'))
 
 /* ------------------------------------------------------- */
+// Sending Mail (nodemailer):
+
+const nodemailer = require('nodemailer')
+
+// Create Test (Fake) Account:
+
+
+
+
+/* ------------------------------------------------------- */
 // Routes:
 
 // HomePath:
