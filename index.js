@@ -57,7 +57,17 @@ const nodemailer = require('nodemailer')
 }
 */
 
-
+// Connection to mailServer:
+const transporter = nodemailer.createTransport({
+    host: 'smtp.ethereal.email',
+    port: 587,
+    secure: false, // false | 'tls' | 'ssl'
+    auth: {
+        user: 'lpvamvjr6k4cdzi7@ethereal.email',
+        pass: 'RfcqfdMZWgNpKEh54a'
+    }
+})
+console.log(transporter)
 
 /* ------------------------------------------------------- */
 // Routes:
