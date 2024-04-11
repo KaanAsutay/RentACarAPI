@@ -38,7 +38,7 @@ app.use(require('./src/middlewares/logger'))
 // res.getModelList():
 app.use(require('./src/middlewares/findSearchSortPage'))
 
-/* ------------------------------------------------------- */
+/* ------------------------------------------------------- *
 // Sending Mail (nodemailer):
 
 const nodemailer = require('nodemailer')
@@ -82,36 +82,34 @@ const nodemailer = require('nodemailer')
 
 // GoogleMail (gmail):
 // Google -> AccountHome -> Security -> Two-Step-Verify -> App-Passwords
-const mailSettings = {
-    service: 'Gmail',
-    user: 'kaanasutay10@gmail.com',
-    pass: 'cpnv ojeq pjep sgka' // https://myaccount.google.com/u/1/apppasswords
-}
+// const mailSettings = {
+//     service: 'Gmail',
+//     user: 'kaanasutay10@gmail.com',
+//     pass: 'cpnv ojeq pjep sgka' // https://myaccount.google.com/u/1/apppasswords
+// }
 
-// Mail Subject/Content:
-const emailContent = {
-    from: mailSettings.user,
-    to: 'kaanasutay10@gmail.com',
-    subject: 'Hello',
-    html: '<b>Hello</b> How are you?'
+// // Mail Subject/Content:
+// const emailContent = {
+//     from: mailSettings.user,
+//     to: 'kaanasutay10@gmail.com',
+//     subject: 'Hello',
+//     html: '<b>Hello</b> How are you?'
 
-}
+// }
 
-// Connect to mailServer:
-const transporter = nodemailer.createTransport({
-    service: mailSettings.service,
-    auth: {
-        user: mailSettings.user,
-        pass: mailSettings.pass
-    }
-})
+// // Connect to mailServer:
+// const transporter = nodemailer.createTransport({
+//     service: mailSettings.service,
+//     auth: {
+//         user: mailSettings.user,
+//         pass: mailSettings.pass
+//     }
+// })
 
-// SendMail:
-transporter.sendMail(emailContent, (error, info) => {
-    error ? console.log(error) : console.log(info)
-})
-
-
+// // SendMail:
+// transporter.sendMail(emailContent, (error, info) => {
+//     error ? console.log(error) : console.log(info)
+// })
 
 /* ------------------------------------------------------- */
 // Routes:
