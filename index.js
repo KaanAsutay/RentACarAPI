@@ -29,6 +29,9 @@ dbConnection()
 // Accept JSON:
 app.use(express.json())
 
+// Call static uploadFile:
+app.use('/img', express.static('./upload'))
+
 // Check Authentication:
 app.use(require('./src/middlewares/authentication'))
 
